@@ -16,7 +16,7 @@ cp $BASE_DIR/include/*.h $INSTALL_DIR/include/torch2c
 
 rm -rf $OUT_BASE_DIR
 rm -rf $OUT_BUILD_DIR
-python3 test/$1.py
+PYTHONPATH=${BASE_DIR} python ${BASE_DIR}/test/$1.py
 
 OUT_DIR=$OUT_BASE_DIR/*
 cp $BASE_DIR/scripts/CMakeLists.txt $OUT_DIR
